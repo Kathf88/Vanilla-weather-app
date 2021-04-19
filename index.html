@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
@@ -12,45 +11,53 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
-     <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
   </head>
   <body>
     <div class="container">
-      <div class="whole-weather-app">
-      <h1>Ålesund</h1>
-      <ul>
-        <li>Saturday 12:00</li>
-        <li>Clear</li>
-      </ul>
-      <div class="row">
-        <div class="col-6">
-          <img src=" https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-       alt="Clear" 
-      />
-      12°C | 37°F
-      </div>
-      <div class="col-6">
-<ul>
-<li>
-  Precipitation:0%
-</li>
-<li>
- Humidity:0%
-</li>
-<li>
- Wind: km/h
-</li>
-</ul>
-
+      <div class="weather-app-wrapper">
+        <div class="whole-weather-app">
+          <div class="overview">
+            <h1>Ålesund</h1>
+            <ul>
+              <li>Saturday 12:00</li>
+              <li>Clear</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src=" https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Clear"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong>12</strong>
+                  <span class="units">°C | <a href="#">°F</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation:0%</li>
+                <li>Humidity:0%</li>
+                <li>Wind: km/h</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <small>
+          <a
+            href="https://github.com/Kathf88/Vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Kathrine Færø
+        </small>
       </div>
     </div>
-    <small>
-      <a href="https://github.com/Kathf88/Vanilla-weather-app" target="_blank">
-      Open-source code</a> by Kathrine Færø
-    </small>
-    </div>
-    
     <script src="src/app.js"></script>
   </body>
 </html>
