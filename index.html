@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
   </head>
+
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
@@ -52,8 +53,12 @@
               <div class="clearfix weather-temperature">
                 <img src="" alt="Clear" id="icon" class="float-left" />
                 <div class="float-left">
-                  <strong id="temperature"></strong>
-                  <span class="units">°C | <a href="#">°F</a></span>
+                  <strong id="temperature"> </strong>
+                  <span class="units">
+                    <a href="#" id="celcius-link" class="active">°C</a>
+                    |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
                 </div>
               </div>
             </div>
