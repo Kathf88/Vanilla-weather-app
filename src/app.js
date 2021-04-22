@@ -52,10 +52,24 @@ function displayTemperature(response) {
     
 }
 
-
-
+function search(city) {
 let apiKey = "b8fdffaf7eef3ad3a428f00894228f66"
-let city = "New York";
 let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 axios.get(apiUrl).then(displayTemperature)
+}
+
+
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+   console.log(cityInputElement.value)
+
+}
+
+
+search ("Ålesund");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
